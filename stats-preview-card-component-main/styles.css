@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+    --Very_dark_blue: hsl(233, 47%, 7%);
+    --Dark_desaturated_blue: hsl(244, 38%, 16%);
+    --Soft_violet: hsl(277, 64%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --Slightly1: hsla(0, 0%, 100%, 0.75);
+    --Slightly2: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*MOBILE VIEW*/
+
+@media only screen and (min-width:240px) and (max-width:375px) {
+
+body {
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Very_dark_blue);
+}
+
+.container {
+    width: 335px;
+    height: 790px;
+    background-color: var(--Dark_desaturated_blue);
+    border-radius: 10px;
+    margin: 90px auto 40px;
+    overflow: hidden;
+}
+
+.container__img {
+    background-image: url(./images/image-header-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 240px;
+    filter: opacity(0.4) drop-shadow(0 0 0 var(--Soft_violet));
+}
+
+.texts {
+    width: 80%;
+    margin: 45px auto 50px;
+}
+
+.texts__title {
+    text-align: center;
+    color: var(--White);
+    font-size: 1.8em;
+}
+
+.texts__title__colored {
+    color: var(--Soft_violet);
+}
+
+.texts__data {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--Slightly2);
+    line-height: 1.6em;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.stats__companies {
+    margin-bottom: 30px;
+}
+
+.stats__templates {
+    margin-bottom: 30px;
+}
+
+.number {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--White);
+    margin-bottom: 5px;
+}
+
+.element {
+    text-transform: uppercase;
+    color: var(--Slightly2);
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: .8em;
+    letter-spacing: 1px;
+}
+
+}
+
+/*DESKTOP VIEW*/
+
+@media only screen and (min-width:376px) and (max-width:1440px) {
+
+    body {
+        font-size: 15px;
+        font-family: "Inter", sans-serif;
+        width: 100%;
+        height: 100%;
+        background-color: var(--Very_dark_blue);
+    }
+    
+    .container {
+        width: 1110px;
+        height: 450px;
+        background-color: var(--Dark_desaturated_blue);
+        border-radius: 10px;
+        margin: 170px auto 170px;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    
+    .container__img {
+        background-image: url(./images/image-header-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 450px;
+        filter: opacity(0.4) drop-shadow(0 0 0 var(--Soft_violet));
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    
+    .texts {
+        width: 75%;
+        margin: 70px 70px auto 70px;
+    }
+    
+    .texts__title {
+        text-align: left;
+        color: var(--White);
+        font-size: 2.2em;
+        line-height: 1.3em;
+    }
+    
+    .texts__title__colored {
+        color: var(--Soft_violet);
+    }
+    
+    .texts__data {
+        margin-top: 30px;
+        text-align: left;
+        font-size: 1em;
+        color: var(--Slightly2);
+        line-height: 1.6em;
+        letter-spacing: .5px;
+    }
+    
+    .stats {
+        display: flex;
+        flex-direction: row;
+        margin-top: 70px;
+        margin-left: -15px;
+        justify-content: space-evenly;
+    }
+    
+    .number {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: var(--White);
+        margin-bottom: 5px;
+    }
+    
+    .element {
+        text-transform: uppercase;
+        color: var(--Slightly2);
+        font-family: "Lexend Deca", sans-serif;
+        font-weight: 400;
+        font-size: .8em;
+        letter-spacing: 1px;
+    }
+    
+    }
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--White);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
